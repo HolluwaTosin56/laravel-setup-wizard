@@ -21,9 +21,9 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=5.5.9",
-    "illuminate/support": "5.4.*",
-    "laravelcollective/html": "^5.4"
+    "php": ">=7.0.0",
+    "illuminate/support": "5.5.*",
+    "laravelcollective/html": "^5.5"
   },
   "requireDev": {
   },
@@ -31,5 +31,15 @@
     "psr-4": {
       "MarvinLabs\\SetupWizard\\": "src/"
     }
-  }
+  },
+  "extra": {
+        "laravel": {
+            "providers": [
+                "MarvinLabs\\SetupWizard\\ServiceProvider"
+            ],
+            "aliases": {
+               "SetupWizard" : "MarvinLabs\\SetupWizard\\Facades\\SetupWizard"
+            }
+        }
+    }
 }
